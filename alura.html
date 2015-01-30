@@ -1,0 +1,74 @@
+<canvas id="tela" width="600" height="400"></canvas>
+<script>
+
+var tela = document.getElementById("tela");
+var c = tela.getContext("2d");
+
+c.fillStyle = "black";
+c.fillRect(0,0,600,400);
+
+var forma = function(x,y,w,z){
+c.fillStyle = "#42C920";
+c.fillRect(x,y,w,z);
+};
+
+var y = 0;
+var x = 0;
+var desenha = function(){
+	/*var x = Math.round(Math.random()*600)*/
+
+	/*var x = Math.round(Math.random()*600);
+	var y = Math.round(Math.random()*400);
+	forma(x,y,10,10);
+	x=x+10;
+	y=y+10;*/
+
+	forma(x,y,10,10);
+	y=y+10;
+	if(y==400){
+		y=0;
+		x=x+10;	
+	};
+
+	//A
+	c.fillStyle = "black";
+	c.fillRect(30,100,20,150);
+	c.fillRect(30,100,100,20);
+	c.fillRect(110,100,20,150);
+	c.fillRect(30,160,100,20);
+
+	//L
+	c.fillStyle = "black";
+	c.fillRect(140,100,20,150);
+	c.fillRect(140,230,100,20);
+
+	//U
+	c.fillStyle = "black";
+	c.fillRect(250,100,20,150);
+	c.fillRect(250,230,100,20);
+	c.fillRect(330,100,20,150);
+
+	//R
+	c.fillStyle = "black";
+	c.fillRect(360,100,20,150);
+	c.fillRect(360,100,100,20);
+	c.fillRect(440,100,20,60);
+	c.fillRect(360,160,100,20);
+	c.fillRect(440,230,20,20);/**/
+	c.fillRect(430,220,20,20);
+	c.fillRect(420,210,20,20);
+	c.fillRect(410,200,20,20);
+	c.fillRect(400,190,20,20);
+	c.fillRect(390,180,20,20);
+	c.fillRect(380,170,20,20);
+
+	//A
+	c.fillStyle = "black";
+	c.fillRect(470,100,20,150);
+	c.fillRect(470,100,100,20);
+	c.fillRect(550,100,20,150);
+	c.fillRect(470,160,100,20);
+};
+
+setInterval(desenha, 10);
+</script>
